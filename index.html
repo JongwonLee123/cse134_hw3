@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jongwon Lee's Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <noscript>
+        <div class="noscript-message">
+            <p>Some of the features of this website will not work with javascript not working or disabled</p>
+        </div>
+    </noscript>
+
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback(){
+                console.log("Hello world!");
+            }
+
+            disconnectedCallback(){
+                //
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+    </script>
+
+    <style>
+        #gitLogo {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #gitLogo:hover circle {
+            fill: orange;
+        }
+
+        #gitLogo:hover text {
+            fill: black;
+        }
+    </style>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="portfolio.html">Portfolio</a> |
+            <a href="contact.html">Contact</a> | 
+            <a href="credits.html">Credits</a> | 
+            <a href="skills.html">Skills</a> 
+        </nav>
+    </header>
+
+    <main>
+        <hello-world></hello-world>
+
+        <dialog open>
+            <p>Greetings, one and all!</p>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </dialog>
+
+        <h1>Welcome to Jongwon Lee's Personal Website</h1>
+
+        <p>
+            Einstein's formula:
+            <math>
+                <mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup>
+            </math>
+        </p>
+
+
+        <canvas id="myCanvas" width="300" height="200" style="border:1px solid #333;"></canvas><br>
+
+        <img src="./images/git.png" alt="Slideshow of images" width="200"><br>
+        <svg id="gitLogo" width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Git Logo">
+        <!-- Background shape -->
+        <circle cx="50" cy="50" r="45" fill="black" />
+
+        <!-- “git” text -->
+        <text x="50%" y="57%" text-anchor="middle" font-size="32" fill="white" font-family="Arial" dy=".3em">git</text>
+        </svg>
+        <br>
+
+        <label for="progress-bar">Website progress:</label>
+        <progress id="progress-bar" value="30" max="100">30 %</progress> <br>
+
+        <video controls width="250">
+            <source src="/dancy.mp4" type="video/mp4">
+            <a href="/dancy.mp4">MP4</a>
+        </video>
+    </main>
+
+    <footer>
+        <a href="contact.html"><strong>Contact Me</strong></a>
+        <br>
+        <p>© 2025 Jongwon Lee</p>
+    </footer>
+</body>
+</html>

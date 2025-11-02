@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Page</title>
+    <link rel="stylesheet" href="style.css">
     <style> 
         project-card {
             display: block;
@@ -30,54 +31,59 @@
 
     <main>
         <h1>My Portfolio</h1>
-        <h2>Personal Projects</h2>
-        <div class="project-list">
-            <project-card>
-                <img src="./images/" alt="Project 1 Image" />
-                <div class="project-content">
-                    <h3>Project 1 Title</h3>
-                    <p>Brief description of Project 1.</p>
+        <div class="project-container">
+            <section class="personal-projects">
+                <div class="project-list">
+                    <h2>Personal Projects</h2>
+                    <project-card>
+                        <img src="./images/" alt="Project 1 Image" />
+                        <div class="project-content">
+                            <h3>Project 1 Title</h3>
+                            <p>Brief description of Project 1.</p>
+                        </div>
+                    </project-card>
+                    <project-card>
+                        <img src="./images/" alt="Project 2 Image" />
+                        <div class="project-content">
+                            <h3>Project 2 Title</h3>
+                            <p>Brief description of Project 2.</p>
+                        </div>
+                    </project-card>
+                    <project-card>
+                        <img src="./images/" alt="Project 3 Image" />
+                        <div class="project-content">
+                            <h3>Project 3 Title</h3>
+                            <p>Brief description of Project 3.</p>
+                        </div>  
+                    </project-card>
                 </div>
-            </project-card>
-            <project-card>
-                <img src="./images/" alt="Project 2 Image" />
-                <div class="project-content">
-                    <h3>Project 2 Title</h3>
-                    <p>Brief description of Project 2.</p>
+            </section>
+            <section class="group-projects">
+                <div class="project-list">
+                    <h2>Group Projects</h2>
+                    <project-card>
+                        <img src="./images/" alt="Project 1 Image" />
+                        <div class="project-content">
+                            <h3>Project 1 Title</h3>
+                            <p>Brief description of Project 1.</p>
+                        </div>
+                    </project-card>
+                    <project-card>
+                        <img src="./images/" alt="Project 2 Image" />
+                        <div class="project-content">
+                            <h3>Project 2 Title</h3>
+                            <p>Brief description of Project 2.</p>
+                        </div>
+                    </project-card>
+                    <project-card>
+                        <img src="./images/" alt="Project 3 Image" />
+                        <div class="project-content">
+                            <h3>Project 3 Title</h3>
+                            <p>Brief description of Project 3.</p>
+                        </div>  
+                    </project-card>
                 </div>
-            </project-card>
-            <project-card>
-                <img src="./images/" alt="Project 3 Image" />
-                <div class="project-content">
-                    <h3>Project 3 Title</h3>
-                    <p>Brief description of Project 3.</p>
-                </div>  
-            </project-card>
-        </div>
-        
-        <h2>Group Projects</h2>
-        <div class="project-list">
-            <project-card>
-                <img src="./images/" alt="Project 1 Image" />
-                <div class="project-content">
-                    <h3>Project 1 Title</h3>
-                    <p>Brief description of Project 1.</p>
-                </div>
-            </project-card>
-            <project-card>
-                <img src="./images/" alt="Project 2 Image" />
-                <div class="project-content">
-                    <h3>Project 2 Title</h3>
-                    <p>Brief description of Project 2.</p>
-                </div>
-            </project-card>
-            <project-card>
-                <img src="./images/" alt="Project 3 Image" />
-                <div class="project-content">
-                    <h3>Project 3 Title</h3>
-                    <p>Brief description of Project 3.</p>
-                </div>  
-            </project-card>
+            </section>
         </div>
     </main>
     

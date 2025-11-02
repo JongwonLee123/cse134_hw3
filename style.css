@@ -47,6 +47,8 @@ footer{
     margin-top: 2rem;
 }
 
+/* portfolio */
+
 .project-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,7 +59,41 @@ footer{
 .project-list{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
     justify-content: center;
 
+}
+
+/* skills */
+
+.list-intro{
+    display: flex;
+    gap: 5rem;
+}
+
+.list-intro > *{
+    flex: 1;
+    min-width: 0;
+}
+
+.list-intro h2{
+    text-align: center;
+}
+
+.skills_tools{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: #000000 solid 2px;
+    border-radius: 8px;
+}
+
+.other-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #000000 solid 2px;
+    border-radius: 8px;
 }

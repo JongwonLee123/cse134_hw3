@@ -75,25 +75,24 @@ footer{
 .list-intro > *{
     flex: 1;
     min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    border: #000000 solid 2px;
+    border-radius: 8px;
 }
 
 .list-intro h2{
     text-align: center;
 }
 
-.skills_tools{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    border: #000000 solid 2px;
-    border-radius: 8px;
+.skills{
+    background-color: #ffa5a5;
+}
+
+.tools{
+    background-color: #bcffac;
 }
 
 .other-skills{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: #000000 solid 2px;
-    border-radius: 8px;
+    background-color: #89caff;
 }

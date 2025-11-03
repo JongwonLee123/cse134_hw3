@@ -56,6 +56,42 @@ footer{
     margin-top: 2rem;
 }
 
+/* === Main Page === */
+#main-page-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;  
+  gap: 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: var(--main-bubble-color);
+  border-radius: 4rem;
+}
+
+#main-page-layout * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#main-page-layout canvas,
+#main-page-layout img,
+#main-page-layout svg,
+#main-page-layout video {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  border-radius: 8px;
+}
+
+audio,
+iframe {
+  width: 100%;
+  border-radius: var(--card-radius);
+}
+
 /* === About Page === */
 #about-page {
   display: flex;
@@ -132,42 +168,7 @@ footer{
   height: 500px;
 }
 
-/* === Main Page === */
-#main-page-layout {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;  
-    gap: 1.5rem;         
-    max-width: 100%;     
-    margin: 0 auto;        
-    padding: 1rem;
-    background-color: var(--main-bubble-color);
-    border-radius: 4rem;
-}
-
-#main-page-layout * {
-    max-width: 100%; 
-    box-sizing: border-box;
-}
-
-#main-page-layout canvas,
-#main-page-layout img,
-#main-page-layout svg,
-#main-page-layout video {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    border-radius: 8px; 
-}
-
-audio,
-iframe {
-  width: 100%;
-  border-radius: var(--card-radius);
-}
-
-/* portfolio */
+/* === portfolio === */
 #portfolio-main{
     background-color: var(--main-bubble-color);
     border: #000000 solid 2px;
@@ -383,6 +384,62 @@ iframe {
     padding: 0.6rem 0;
     border-radius: 6px;
   }
+
+  /* === Main Mobile === */
+  #main-page-layout {
+    display: grid;
+    grid-template-columns: 1fr;   /* ✅ 1 column */
+    grid-template-rows: repeat(6, auto); 
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--main-bubble-color);
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #main-page-layout > * {
+    text-align: center;
+    width: 90%;
+    max-width: 300px; /* slightly wider on mobile */
+  }
+
+  #main-page-layout p {
+    font-size: 0.95rem;
+  }
+
+  #main-page-layout canvas,
+  #main-page-layout img,
+  #main-page-layout svg,
+  #main-page-layout video,
+  #main-page-layout progress {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  #progress-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #progress-bar label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  #progress-bar progress {
+    width: 85%;
+  }
+
+  #main-page-layout video {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
   /* === About Mobile === */
   #about-page {
     flex-direction: column;
@@ -473,6 +530,62 @@ iframe {
   nav a{
     font-size: 1.5rem;
   }
+  /* === Main Page Desktop === */
+  #main-page-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);    /* 2 evenly sized rows */
+    gap: 1.2rem;                           /* smaller gap for tighter layout */
+    justify-items: center;
+    align-items: center;                   /* center vertically */
+    background-color: var(--main-bubble-color);
+    border-radius: 3rem;
+    padding: 1.5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Ensure each item stays centered and consistent */
+  #main-page-layout > * {
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #main-page-layout p {
+    font-size: 1.1rem;
+  }
+
+  #main-page-layout canvas,
+  #main-page-layout img,
+  #main-page-layout svg,
+  #main-page-layout video,
+  #main-page-layout progress {
+    max-width: 220px;
+    width: 100%;
+  }
+
+  /* Progress bar section */
+  #progress-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #progress-bar label {
+    margin-bottom: 0.3rem;
+  }
+
+  #progress-bar progress {
+    width: 80%;
+  }
+
+  #main-page-layout video {
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  }
+
   /* === About Desktop === */
    #about-page {
     align-items: center;

@@ -183,7 +183,7 @@ iframe {
 
 .project-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* ✅ stays for tablet (default) */
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
   justify-items: center;
@@ -218,13 +218,30 @@ project-card img {
   text-align: center;
 }
 
+.project-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  text-decoration: none;
+  color: var(--main-color); 
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.project-link:hover {
+  color: #FCD32D;
+  text-decoration: underline;
+}
+
+
 /* contact */
 #contact-form {
   display: flex;
-  justify-content: center;        /* center horizontally */
-  align-items: center;            /* center vertically if you add height */
+  justify-content: center;       
+  align-items: center;            
   padding: 2rem;
-  background-color: #f7f9ff;      /* light background for contrast */
+  background-color: #f7f9ff;     
 }
 
 #contact-form form {
@@ -405,7 +422,7 @@ project-card img {
   }
 
   nav a {
-    flex: 1 1 calc(33.33% - 0.8rem); /* ✅ 3 per row, accounting for gap */
+    flex: 1 1 calc(33.33% - 0.8rem); 
     text-align: center;
     font-size: 0.9rem;
     padding: 0.6rem 0;
@@ -415,7 +432,7 @@ project-card img {
   /* === Main Mobile === */
   #main-page-layout {
     display: grid;
-    grid-template-columns: 1fr;   /* ✅ 1 column */
+    grid-template-columns: 1fr;   
     grid-template-rows: repeat(6, auto); 
     gap: 1rem;
     justify-items: center;
@@ -430,7 +447,7 @@ project-card img {
   #main-page-layout > * {
     text-align: center;
     width: 90%;
-    max-width: 300px; /* slightly wider on mobile */
+    max-width: 300px; 
   }
 
   #main-page-layout p {
@@ -493,14 +510,14 @@ project-card img {
   }
 
   #Resume iframe {
-    height: 400px;               /* smaller view */
+    height: 400px;            
     max-width: 100%;
   }
 
   /* === Portfolio Mobile === */
   .project-container {
     display: flex;
-    flex-direction: column;   /* ✅ 1 column */
+    flex-direction: column;   
     align-items: center;
     gap: 1.5rem;
     padding: 1rem;
@@ -525,21 +542,21 @@ project-card img {
 
   /* === Contact Sizing === */
   #contact-info {
-    width: 90%;                /* ✅ fits nicely within screen */
-    padding: 1rem 1.2rem;      /* reduce padding */
-    border-radius: 12px;       /* slightly smaller curve */
+    width: 90%;               
+    padding: 1rem 1.2rem;      
+    border-radius: 12px;       
     margin: 1.5rem auto;
   }
 
   #contact-info p {
-    font-size: 0.9rem;         /* smaller text */
-    padding: 0.6rem 0.8rem;    /* reduce bubble padding */
+    font-size: 0.9rem;        
+    padding: 0.6rem 0.8rem;    
     border-radius: 1.5rem;
     margin: 0.4rem 0;
   }
 
   #contact-info a {
-    font-size: 0.9rem;         /* match paragraph text */
+    font-size: 0.9rem;        
   }
 
   /* === Skills Sizing === */
@@ -562,7 +579,7 @@ project-card img {
 
   /* === Credits Sizing === */
   .UCSD {
-    flex-direction: column;       /* ✅ Stack vertically */
+    flex-direction: column;     
     align-items: center;
     text-align: center;
     gap: 1rem;
@@ -572,7 +589,7 @@ project-card img {
   .experience {
     width: 90%;
     margin: 0 auto;
-    font-size: 0.9rem;           /* smaller text */
+    font-size: 0.9rem;          
     padding: 1rem;
   }
 }
@@ -586,11 +603,11 @@ project-card img {
   /* === Main Page Desktop === */
   #main-page-layout {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(2, 1fr);    /* 2 evenly sized rows */
-    gap: 1.2rem;                           /* smaller gap for tighter layout */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);   
+    gap: 1.2rem;                         
     justify-items: center;
-    align-items: center;                   /* center vertically */
+    align-items: center;                 
     background-color: var(--main-bubble-color);
     border-radius: 3rem;
     padding: 1.5rem 2rem;
@@ -680,7 +697,7 @@ project-card img {
   }
 
   #Resume iframe {
-    height: 800px;              /* ✅ larger resume display */
+    height: 800px;            
   }
 
   /* === Portfolio Desktop === */
@@ -689,7 +706,7 @@ project-card img {
   }
 
   .project-container {
-    grid-template-columns: 1fr 1fr; /* keep two sections side by side */
+    grid-template-columns: 1fr 1fr; 
     gap: 3rem;
     padding: 2rem 3rem;
     justify-items: center;
@@ -700,7 +717,7 @@ project-card img {
   }
 
   project-card {
-    width: 340px;             /* ✅ larger cards for desktop */
+    width: 340px;           
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   }
 

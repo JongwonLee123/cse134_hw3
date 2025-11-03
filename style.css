@@ -169,26 +169,53 @@ iframe {
 }
 
 /* === portfolio === */
-#portfolio-main{
-    background-color: var(--main-bubble-color);
-    border: #000000 solid 2px;
-    border-radius: 16px;
+#portfolio-main {
+  background-color: var(--main-bubble-color);
+  border: 2px solid #000000;
+  border-radius: 16px;
+  padding: 2rem 1rem;
 }
 
-.project-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
+#portfolio-main h1 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.project-list{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ✅ stays for tablet (default) */
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  box-sizing: border-box;
+}
 
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-list h2 {
+  text-align: center;
+}
+
+project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+  text-align: center;
 }
 
 /* contact */
@@ -470,6 +497,32 @@ iframe {
     max-width: 100%;
   }
 
+  /* === Portfolio Mobile === */
+  .project-container {
+    display: flex;
+    flex-direction: column;   /* ✅ 1 column */
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  project-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  project-card img {
+    height: 160px;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+
   /* === Contact Sizing === */
   #contact-info {
     width: 90%;                /* ✅ fits nicely within screen */
@@ -628,6 +681,39 @@ iframe {
 
   #Resume iframe {
     height: 800px;              /* ✅ larger resume display */
+  }
+
+  /* === Portfolio Desktop === */
+  #portfolio-main {
+    padding: 3rem 4rem;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr 1fr; /* keep two sections side by side */
+    gap: 3rem;
+    padding: 2rem 3rem;
+    justify-items: center;
+  }
+
+  .project-list {
+    gap: 2.5rem;
+  }
+
+  project-card {
+    width: 340px;             /* ✅ larger cards for desktop */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  project-card img {
+    height: 200px;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-content p {
+    font-size: 1rem;
   }
 
   /* === Skills Sizing === */

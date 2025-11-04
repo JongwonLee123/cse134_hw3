@@ -13,8 +13,8 @@
 }
 
 *{
-    font-family: "Lato", sans-serif !important;
-    color: var(--main-text-color)
+  font-family: "Lato", sans-serif !important;
+  color: var(--main-text-color)
 }
 
 body{
@@ -25,56 +25,56 @@ body{
 }
 
 h1{
-    text-align: center;
-    margin-top: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 header{
-    background-color: var(--light-grey);
-    padding: 1rem;
-    margin-bottom: 2rem;
+  background-color: var(--light-grey);
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 nav{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin:0;
-    padding:0;  
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin:0;
+  padding:0;  
 }
 
 nav a{
-    text-decoration: none;
-    color: #000000;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: var(--card-radius);
-    transition: 
-    background-color 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--card-radius);
+  transition: 
+  background-color 0.3s ease,
+  transform 0.2s ease,
+  box-shadow 0.2s ease;
 }
 
 nav a:hover{
-    background-color: var(--main-bubble-color);
-    color: white;
-    transform: scale(1.1); 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  background-color: var(--main-bubble-color);
+  color: white;
+  transform: scale(1.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
 footer{
-    text-decoration: none;
-    color: #000000;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    background-color: var(--light-grey);
-    border-radius: var(--card-radius);
-    margin-top: 2rem;
-    transition: 
-    background-color 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--light-grey);
+  border-radius: var(--card-radius);
+  margin-top: 2rem;
+  transition: 
+  background-color 0.3s ease,
+  transform 0.2s ease,
+  box-shadow 0.2s ease;
 }
 
 footer a:hover{
@@ -202,7 +202,10 @@ iframe {
   border: 2px solid #000000;
   border-radius: var(--card-radius);
   padding: 2rem 1rem;
-  margin: 10px 20px 10px 10px;
+  margin: 10px auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 #portfolio-main h1 {
@@ -212,11 +215,13 @@ iframe {
 
 .project-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 2rem;
   justify-items: center;
+  align-items: start;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .project-list {
@@ -225,6 +230,8 @@ iframe {
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-list {
@@ -233,19 +240,28 @@ iframe {
   }
 }
 
-project-card{
-  width: 80%;
+project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 project-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
 }
 
 .project-content {
@@ -260,7 +276,7 @@ project-card img {
 
 .project-link {
   text-decoration: none;
-  color: var(--main-color); 
+  color: var(--main-color);
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
@@ -402,21 +418,21 @@ project-card img {
 /* === skills === */
 
 .list-intro{
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .list-intro > *{
-    flex: 1;
-    min-width: 0;
-    flex-direction: column;
-    justify-content: center;
-    border: #000000 solid 2px;
-    border-radius: var(--card-radius);
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  border: #000000 solid 2px;
+  border-radius: var(--card-radius);
 }
 
 .list-intro h2{
-    text-align: center;
+  text-align: center;
 }
 
 
@@ -804,7 +820,7 @@ main {
 }
 
 /* === Desktop View === */
-@media (min-width: 1100px) {
+@media (min-width: 1300px) {
   /* === Navbar Sizing === */
   nav a{
     font-size: 1.5rem;
@@ -922,7 +938,7 @@ main {
   }
 
   project-card {
-    width: 340px;           
+    width: 500px;           
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   }
 

@@ -575,10 +575,6 @@ main {
   main {
     overflow-x: hidden; 
   }
-}
-
-/* === mid tablet to mobile === */
-@media (max-width: 850px){
   .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -590,6 +586,36 @@ main {
 
   project-card {
     width: 70%;
+    max-width: 320px;
+  }
+
+  project-card img {
+    height: 160px;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* === mid tablet to mobile === */
+@media (max-width: 965px){
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  project-card {
+    width: 100%;
     max-width: 320px;
   }
 

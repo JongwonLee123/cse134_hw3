@@ -56,6 +56,11 @@ nav a{
   box-shadow 0.2s ease;
 }
 
+nav:has(a:hover) {
+  background: color-mix(in oklab, var(--main-bubble-color) 20%, white);
+  transition: background 0.3s ease;
+}
+
 nav a:hover{
   background-color: var(--main-bubble-color);
   color: white;
@@ -232,6 +237,11 @@ iframe {
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+}
+
+.project-card:not(:has(img)) {
+  opacity: 0.6;
+  background: color-mix(in srgb, #ddd 80%, white);
 }
 
 .project-list {
@@ -474,19 +484,6 @@ project-card img {
   }
 }
 
-
-@property --ucsd-blue {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #182B49;
-}
-
-@property --ucsd-gold {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #FFCD00; 
-}
-
 @property --scu-red {
   syntax: "<color>";
   inherits: false;
@@ -523,25 +520,13 @@ main {
   margin-block: 4dvh;
   background: linear-gradient(
     135deg in oklab,
-    var(--ucsd-blue),
-    var(--ucsd-gold)
+    color(display-p3 0.1 0.2 0.55),
+    color-mix(in oklab, #FFCD00 85%, white)
   );
   color: #ffffff;
   box-shadow: 0 4px 16px rgba(24, 43, 73, 0.4);
-  animation: ucsd-gradient-shift 6s infinite alternate ease-in-out;
   max-width: 100%;
   box-sizing: border-box;
-}
-
-@keyframes ucsd-gradient-shift {
-  0% {
-    --ucsd-blue: #182B49;
-    --ucsd-gold: #FFCD00;
-  }
-  100% {
-    --ucsd-blue: #1E3A7D;
-    --ucsd-gold: #FFD54F;
-  }
 }
 
 .experience {
@@ -633,7 +618,6 @@ main {
     font-size: 0.9rem;
   }
 }
-
 
 /* === Mobile View === */
 @media (max-width: 600px) {
